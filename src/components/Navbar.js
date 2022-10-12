@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
@@ -11,11 +13,31 @@ const Navbar = () => {
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl">YOGESH.</h1>
           {/* hidden when screen sm only show when screen large like md */}
           <ul className="hidden md:flex">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platforms</li>
-            <li>Pricing</li>
+            <li>
+              <Link to="home" smooth={true} duration={500}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="about" smooth={true} offset={-200} duration={500}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="support" smooth={true} offset={-50} duration={500}>
+                Support
+              </Link>
+            </li>
+            <li>
+              <Link to="platforms" smooth={true} offset={-100} duration={500}>
+                Platforms
+              </Link>
+            </li>
+            <li>
+              <Link to="pricing" smooth={true} offset={-50} duration={500}>
+                Pricing
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="hidden md:flex pr-4">

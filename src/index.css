@@ -6,7 +6,8 @@
 @layer base {
   /* it apply on all the li */
 li {
-    @apply p-4;
+    @apply p-4 pointer-events-auto cursor-pointer;
+
   }
     button {
       /* it apply on all the button */
